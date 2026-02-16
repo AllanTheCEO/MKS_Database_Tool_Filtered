@@ -1,0 +1,15 @@
+uvicorn
+python-fasthtml
+fastapi
+pathlib
+pyodbc
+pyarrow
+polars
+jupyter
+jupyterlab
+marimo
+pandas
+matplotlib
+ipywidgets
+numpy
+openpyxl

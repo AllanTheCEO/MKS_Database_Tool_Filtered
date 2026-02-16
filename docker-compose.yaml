@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: database_app
+    ports:
+      - "8000:8000"
+      - "8888:8888"
+    volumes:
+      - .:/app

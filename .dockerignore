@@ -1,0 +1,12 @@
+# Ignore big data
+*.parquet
+*.csv
+
+parquets/
+silver_parquets/
+staging_dir/
+__pycache__/
+
+# Python envs
+venv/
+.env/
