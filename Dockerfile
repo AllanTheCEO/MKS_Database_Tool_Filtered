@@ -16,4 +16,5 @@ COPY . .
 
 EXPOSE 8000 8888
 
-CMD "command_hidden_to_protect_privacy"
+CMD ["bash", "-lc", "python app.py & jupyter notebook --ip=0.0.0.0 --port=8888 \
+  --ServerApp.open_browser=False --ServerApp.allow_root=True --ServerApp.token='' --ServerApp.password=''"]
