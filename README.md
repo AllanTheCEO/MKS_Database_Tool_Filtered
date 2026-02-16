@@ -23,3 +23,9 @@ The modules page allows for accessing data processing modules, usually jupyter o
 
 ![Docker Logs](assets/Docker_Logs.png)
 ![app.py Logs](assets/app.py_Logs.png)
+
+FUTURE ROADMAP
+ - Support for DVT data.
+ - Complete ingestion automation: determine how to safely ingest in the middle of tests.
+ - Add support for pdfs and pngs.
+ - Refine data-querying method to support more sophisticated metadata handling. This might help us answer questions without reading the bronze files at all; we could also tailor metadata for common questions.
