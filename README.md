@@ -1,11 +1,15 @@
 # MKS_Database_Tool_Filtered
 
+Old test data frequently kept getting lost or was unable to answer critical customer questions, meaning engineers frequently had to redo old tests or manually search thousands of excel folders for the right files. Additionally, there was no central service for data processing modules, so engineers had to create their tools to analyze specific types of data. These could be in any language (Python, MATLAB, Excel, etc.) and could not be used on other machines. 
+To solve this, I created a central database to contain the data from all test stands and a Python Application to let users fetch data and host their own modules. I was given a general goal and guided by senior engineers that wanted this project for a long time, but the majority of design decisions were mine and I wrote every line of code (with some help from AI).
+
 Centralized Excel data from distributed machines into a central database organized by SQL and Parquet.
 A Python FastHTML API and UI allows users to filter the data and access hosted data processing modules.
-Database and Applications (UI) side are stored on two seperate servers. A docker container hosts the web interface and allows the applications side to access the database.
+Database and Applications (UI + API) sides are stored on two seperate servers. A docker container hosts the web interface and allows the applications side to access the database.
 
  - Compressed 3TB+ of Excel Data for ~20 users
  - Two types: MAT and DVT data. Implemented MAT first as proof-of-concept.
+ - Administrator can manually ingest select test stands.
  - Python watchdog uses polling to monitor directories and upload changes to staging_dir. A seperate system (not fully implemented by end of co-op) automatically ingests the staging_dir to the database.
 
 ![UI: Main Page](assets/Main_Page.png)
